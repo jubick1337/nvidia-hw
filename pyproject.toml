@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "homeworks"
+version = "0.1.0"
+description = ""
+authors = ["matvejnovikov <mattyson.so@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+black = "^21.9b0"
+pylint = "^2.11.1"
+mypy = "^0.910"
+pytest = "^6.2.5"
+isort = "^5.9.3"
+flake8 = "^3.9.2"
+autoflake = "^1.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
