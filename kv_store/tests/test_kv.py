@@ -34,6 +34,7 @@ def flush_storage():
     "key,value,expected",
     [
         ("kek", "lol", "lol"),
+        ("key_name", "value", "value"),
         ("kek", "a", "a"),
         ("a", "b", "b"),
         ("1", "a", "a"),
@@ -54,7 +55,15 @@ def test_single_adding(key: str, value: str, expected: str):
 
 @pytest.mark.parametrize(
     "key,value,expected",
-    [("kek", ["lol1", "ll2", "ll"], ["lol1", "ll2", "ll"]), ("lel", ["a", "b", "c"], ["a", "b", "c"])],
+    [
+        ("kek", ["lol1", "ll2", "ll"], ["lol1", "ll2", "ll"]),
+        ("lel", ["a", "b", "c"], ["a", "b", "c"]),
+        (
+            "multi_key",
+            ["value1", "value2"],
+            ["value1", "value2"],
+        ),
+    ],
 )
 def test_multiple_adding(key: str, value: List[str], expected: List[str]):
     for val in value:
