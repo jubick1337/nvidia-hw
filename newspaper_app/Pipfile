@@ -8,6 +8,7 @@ verify_ssl = true
 [packages]
 django = "~=3.1.0"
 django-crispy-forms = "==1.9.2"
+wsgi = "*"
 
 [requires]
 python_version = "3.8"
