@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "45f86bc8a1639025c648e5405fb2d97c331455b5495e4510e79a549adfd7ad4e"
+            "sha256": "8d1feba704a5b5a7ec6116fc0859e55cbc8ee48c85aeff1a26ae5faba52ff12c"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -24,6 +24,13 @@
             "markers": "python_version >= '3.6'",
             "version": "==3.4.1"
         },
+        "dj-database-url": {
+            "hashes": [
+                "sha256:4aeaeb1f573c74835b0686a2b46b85990571159ffc21aa57ecd4d1e1cb334163",
+                "sha256:851785365761ebe4994a921b433062309eb882fedd318e1b0fcecc607ed02da9"
+            ],
+            "version": "==0.5.0"
+        },
         "django": {
             "hashes": [
                 "sha256:0fabc786489af16ad87a8c170ba9d42bfd23f7b699bd5ef05675864e8d012859",
@@ -39,6 +46,14 @@
             ],
             "index": "pypi",
             "version": "==1.9.2"
+        },
+        "django-heroku": {
+            "hashes": [
+                "sha256:59dac588ae0030862c79c31fab2a206a1b549282e157b1831fc8491a3eb65c24",
+                "sha256:817165b8c3853bff6cd3b515222b84dd2167a9435b140380181192d153913d69"
+            ],
+            "index": "pypi",
+            "version": "==0.0.0"
         },
         "gunicorn": {
             "hashes": [
@@ -70,6 +85,14 @@
             ],
             "markers": "python_version >= '3.5'",
             "version": "==0.4.2"
+        },
+        "whitenoise": {
+            "hashes": [
+                "sha256:d234b871b52271ae7ed6d9da47ffe857c76568f11dd30e28e18c5869dbd11e12",
+                "sha256:d963ef25639d1417e8a247be36e6aedd8c7c6f0a08adcb5a89146980a96b577c"
+            ],
+            "markers": "python_version >= '3.5' and python_version < '4'",
+            "version": "==5.3.0"
         }
     },
     "develop": {}
