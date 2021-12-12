@@ -1,6 +1,7 @@
 import socket
 import time
 
+from collections import defaultdict
 from typing import Optional, Union
 
 
@@ -28,18 +29,21 @@ class Client:
         if response[:2] != "ok":
             raise ClientError()
 
-        result = {}
+        result = defaultdict(list)
 
         for i, line in enumerate(response.split("\n")):
             if not i or line == "":
                 continue
             try:
                 metric, value, timestamp = line.split()
-                result[metric] = float(value), int(timestamp)
+                result[metric].append((int(timestamp), float(value)))
             except ValueError:
                 raise ClientError()
 
-        return dict(sorted(result.items(), key=lambda item: item[1][1]))
+        for key in result.keys():
+            result[key] = sorted(result[key], key=lambda x: -x[-1])
+
+        return result
 
     def _read_all(self):
         raw_response = bytearray()
